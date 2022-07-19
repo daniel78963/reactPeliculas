@@ -16,6 +16,7 @@ function App() {
   const subtitulo = "Este es un subtitulo";
   const duplicar = (valor: number) => valor * 2;
   const imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/250px-React.svg.png";
+  
   return (
   //    // <div className="App">
   //   //   {/* <header className="App-header">
@@ -44,6 +45,9 @@ function App() {
       <h3>{subtitulo.toUpperCase()}</h3>
       <h4>El doble de 3 es {duplicar(3)}</h4>
       <img alt="Logo React" src={imageURL}></img>
+      <div>
+        <input type="checkbox" checked={true} />Este es un checkbox
+      </div>
     </>
   );
 }
