@@ -41,8 +41,9 @@ function App() {
   //         <div>{fecha.toString()}</div> 
   //   </div>
     <>
-      <h1>Hola mundo</h1>
-      <h3>{subtitulo.toUpperCase()}</h3>
+      <h1 className='rojo'>Hola mundo</h1>
+      <div className='cuadraroRojo'></div>
+      <h3 style={{color: 'blue'}}>{subtitulo.toUpperCase()}</h3>
       <h4>El doble de 3 es {duplicar(3)}</h4>
       <img alt="Logo React" src={imageURL}></img>
       <div>
