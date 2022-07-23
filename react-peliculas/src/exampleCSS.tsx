@@ -11,8 +11,7 @@ export default function ExampleCSS() {
 
     const subtitulo = "Este es un subtitulo";
     const duplicar = (valor: number) => valor * 2;
-    const imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/250px-React.svg.png";
-
+  
     return (
         <>
             <div className='cuadraroRojo'></div>
@@ -21,10 +20,7 @@ export default function ExampleCSS() {
             <h4>El doble de 3 es {duplicar(3)}</h4>
 
             <h4 className={AppCss.color}>App.module.css</h4>
-            <img alt="Logo React" src={imageURL}></img>
-            <div>
-                <input type="checkbox" checked={true} />Este es un checkbox
-            </div>
+           
         </>
     )
 }
