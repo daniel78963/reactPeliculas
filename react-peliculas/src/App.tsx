@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -12,12 +12,12 @@ function App() {
   // //se debe limpiar el componente para no provocar memory lease
   // return () => clearInterval(timerId);
   // })
-  let text = "";
+  const [text, setText] = useState('')
   const imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/250px-React.svg.png";
   const manageClick = () => console.log('Click');
   const manageKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
     console.log(e.currentTarget.value);
-    text = e.currentTarget.value;
+    setText(e.currentTarget.value);
   };
 
   return (
