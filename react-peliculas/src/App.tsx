@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import ShowText from './ShowText';
 
 function App() {
   // const [fecha, setFecha] = useState(new Date())
@@ -12,7 +13,8 @@ function App() {
   // //se debe limpiar el componente para no provocar memory lease
   // return () => clearInterval(timerId);
   // })
-  const [text, setText] = useState('')
+  const [text, setText] = useState('');
+  const [checked, setChecked] = useState(false)
   const imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/250px-React.svg.png";
   const manageClick = () => console.log('Click');
   const manageKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -52,15 +54,20 @@ function App() {
         onClick={() => console.log('click con función anónima')} >hacer click - función anónima</button>
       <br></br>
       <input type="text" onKeyUp={(e) => manageKeyUp(e)}></input>
+
+      <ShowText text="defautl value" />
+
       <br></br>
-      <div>
+      {/* <div>
         {text}
-      </div>
+      </div> */}
       <br></br>
 
       <img alt="Logo React" src={imageURL}></img>
       <div>
-        <input type="checkbox" checked={true} />Este es un checkbox
+        <input type="checkbox"
+        onChange={(e) => setChecked(e.currentTarget.checked)}
+        checked={checked} />Este es un checkbox
       </div>
     </>
   );
