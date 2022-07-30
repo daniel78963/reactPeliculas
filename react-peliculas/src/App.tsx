@@ -55,7 +55,7 @@ function App() {
       <br></br>
       <input type="text" onKeyUp={(e) => manageKeyUp(e)}></input>
 
-      <ShowText text="defautl value" />
+      <ShowText text={text} />
 
       <br></br>
       {/* <div>
